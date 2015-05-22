@@ -13,5 +13,7 @@ public class HelloApp {
 				"beans.xml"));
 		MessageBean bean = factory.getBean("messageBean", MessageBean.class);
 		bean.sayHello("Spring");
+		
+		
 	}
 }
