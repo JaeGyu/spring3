@@ -3,3 +3,5 @@ package ex.chap01.sample2;
 public interface MessageBean {
 	public void sayHello(String name);
 }
+
+
