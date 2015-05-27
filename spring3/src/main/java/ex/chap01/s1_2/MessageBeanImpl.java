@@ -1,5 +1,7 @@
 package ex.chap01.s1_2;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class MessageBeanImpl implements MessageBean {
 
 	private String name;
@@ -28,6 +30,7 @@ public class MessageBeanImpl implements MessageBean {
 		}
 	}
 
+	@Autowired
 	public void setOutputter(Outputter outputter) {
 		this.outputter = outputter;
 	}

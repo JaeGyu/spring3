@@ -6,26 +6,13 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-	<context:annotation-config />
-
-	<bean id="messageBean" class="ex.chap01.s1_2.MessageBeanImpl">
-		<constructor-arg>
-			<value>Spring</value>
-		</constructor-arg>
-
+	<bean id="messageBean" class="ex.chap01.s1_3.MessageBeanImpl"
+		init-method="init" destroy-method="destroy">
 		<property name="greeting">
 			<value>Hello, </value>
 		</property>
-
-		<!-- <property name="outputter"> -->
-		<!-- <ref local="outputter" /> -->
-		<!-- </property> -->
 	</bean>
 
-	<bean id="outputter" class="ex.chap01.s1_2.FileOutputter">
-		<property name="filePath">
-			<value>out_autowired.txt</value>
-		</property>
-	</bean>
+	<bean class="ex.chap01.s1_3.CustomBeanPostProcessor" />
 
 </beans>
