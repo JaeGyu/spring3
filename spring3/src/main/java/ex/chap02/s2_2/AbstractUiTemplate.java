@@ -1,4 +1,4 @@
-package ex.chap02.s2_1;
+package ex.chap02.s2_2;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
